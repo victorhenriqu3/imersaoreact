@@ -1,6 +1,7 @@
 .Logo {
   max-width: 168px;
 }
+
 @media (max-width: 800px) {
   .Logo {
     max-width: 105px;
@@ -23,18 +24,21 @@
   padding-left: 5%;
   padding-right: 5%;
 
-  background: var(--black);
-  border-bottom: 2px solid var(--primary);
+  background: #323232;
+  border-bottom: 2px solid #D3FA00;
 }
+
 body {
   --bodyPaddingTop: 94px;
   padding-top: var(--bodyPaddingTop);
 }
+
 @media (max-width: 800px) {
   .Menu {
     height: 40px;
     justify-content: center;
   }
+
   body {
     --bodyPaddingTop: 40px;
     padding-top: var(--bodyPaddingTop);
@@ -42,8 +46,8 @@ body {
 }
 
 .ButtonLink {
-  color: var(--white);
-  border: 1px solid var(--white);
+  color: #D3FA00;
+  border: 1px solid #D3FA00;
   box-sizing: border-box;
   cursor: pointer;
   padding: 16px 24px;
@@ -56,6 +60,7 @@ body {
   display: inline-block;
   transition: opacity .3s;
 }
+
 .ButtonLink:hover,
 .ButtonLink:focus {
   opacity: .5;
