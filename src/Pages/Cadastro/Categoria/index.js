@@ -32,7 +32,7 @@ function CadastroCategoria() {
   //= =================//
   useEffect(() => {
     if (window.location.href.includes('localhost')) {
-      const URL = 'http://localhost:8080/categorias';
+      const URL = 'https://vicflix.herokuapp.com/categorias';
       fetch(URL).then(async (respostaDoServer) => {
         if (respostaDoServer.ok) {
           const resposta = await respostaDoServer.json();
@@ -96,9 +96,11 @@ function CadastroCategoria() {
         <Button>Cadastrar</Button>
       </form>
 
+      {categorias.length === 0 && <div>Loading...</div>}
+
       <ul>
-        {categorias.map((categoria, indice) => (
-          <li key={`${categoria}${indice}`}>{categoria.nome}</li>
+        {categorias.map((categoria) => (
+          <li key={`${categoria}`}>{categoria.nome}</li>
         ))}
       </ul>
 
